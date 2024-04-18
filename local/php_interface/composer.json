@@ -1,0 +1,16 @@
+{
+    "name": "one/guzzle",
+    "autoload": {
+        "psr-4": {
+            "One\\Guzzle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "konstantin"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^2.0"
+    }
+}

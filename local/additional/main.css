@@ -1,0 +1,19 @@
+/*Скрытие вкладки*/
+/*#crm_scope_detail_c_deal__tab_quote {*/
+/*    display: none !important;*/
+/*}*/
+
+
+/*Долг по компаниии: 1000 руб*/
+/*:root {*/
+/*    --black_red: rgba(254, 44, 49, 0.72);*/
+/*}*/
+
+/*.companyAlert {*/
+
+/*    padding-top: 10px;*/
+/*    padding-bottom: 10px;*/
+/*    padding-left:10px;*/
+/*    background-color: var(--black_red);*/
+/*    color: white;*/
+/*}*/
