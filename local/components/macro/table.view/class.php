@@ -3,7 +3,7 @@
 use Bitrix\Iblock;
 use Bitrix\Main\Loader;
 use Bitrix\Main;
-//use \Models\ClientTable;
+use \Models\ClientTable;
 
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
@@ -66,24 +66,24 @@ class OtusTableComponent extends CBitrixComponent implements Controllerable
             $this->proceedExcel();
         }
 
-        $this->arResult['COUNT'] = (\Models\ClientTable::getCount());
+        $this->arResult['COUNT'] = (ClientTable::getCount());
         $this->includeComponentTemplate();
     }
 
     public function setColumn()
     {
-        $fieldmap = \Models\ClientTable::getMap();
+        $fieldmap = ClientTable::getMap();
         foreach ($fieldmap as $field) {
-            $this->arResult['COLUMNS'][] = [
+            $this->arResult['COLUMNS'][] = array(
                 'id' => $field->getName(),
                 'name'=>$field->getTitle(),
-            ];
+                );
         }
     }
 
     private function setList($page = 1, $limit = 20)
     {
-        $data = \Models\ClientTable::getList(
+        $data = ClientTable::getList(
             array(
                 'order' => array('ID' => 'DESC'),
                 'limit' => $limit,
